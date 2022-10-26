@@ -36,9 +36,16 @@ namespace Q1
 				MessageBox.Show(ex.Message);
 				return ;
 			}
-			
-			MessageBox.Show($"您輸入{result}，介於1~99");
 
+			//呈現
+			Display(result);
+			
+
+		}
+
+		private static void Display(string result)
+		{
+			MessageBox.Show($"您輸入{result}，介於1~99");
 		}
 
 		private string GetResult(int input)

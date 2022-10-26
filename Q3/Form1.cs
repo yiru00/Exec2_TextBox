@@ -45,9 +45,7 @@ namespace Q3
 			int age = year - inputYear;
 			return age >= 13	?$"您的年齡是{age}歲,已滿13歲"
 								:$"您的年齡是{age}歲,未滿13歲";
-			
-			
-	
+
 		}
 
 		//確認輸入日期是否正確
@@ -58,7 +56,7 @@ namespace Q3
 			{
 				throw new Exception("請輸入正確的日期格式");
 			}
-			if (result>DateTime.Today)
+			else if (result>DateTime.Today)
 			{
 				throw new Exception("生日不能大於今天");
 			}

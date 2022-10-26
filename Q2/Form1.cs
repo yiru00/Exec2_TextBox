@@ -25,8 +25,15 @@ namespace Q2
 
 			//判斷
 			string result=GetResult(datetimeInput);
-			MessageBox.Show($"您輸入的日期為{datetimeInput:yyyy-MM-dd}，{result}");
 
+			//呈現
+			Display(datetimeInput,result);
+
+		}
+
+		private void Display(DateTime datetimeInput, string result)
+		{
+			MessageBox.Show($"您輸入的日期為{datetimeInput:yyyy-MM-dd}，{result}");
 		}
 
 		private string  GetResult(DateTime dateTime)
