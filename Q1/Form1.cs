@@ -43,22 +43,15 @@ namespace Q1
 
 		private string GetResult(int input)
 		{
-			if (input < 1 || input > 99)
-			{
-				throw new Exception("數值需介於1~99");
-			}
-			return input.ToString();
+			return (input < 1 || input > 99) ? throw new Exception("數值需介於1~99"):input.ToString();
+
 		}
 
 		private int GetNumber()
 		{
 
 			bool isInt = int.TryParse(textBox1.Text,out int input);
-			if (isInt==false)
-			{
-				throw new Exception("請輸入數字");
-			}
-			return input;
+			return(isInt==false) ?throw new Exception("請輸入數字"):input;
 			
 		}
 	}

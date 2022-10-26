@@ -42,16 +42,12 @@ namespace Q3
 		private string GetAge(int inputYear)
 		{
 			int year = Convert.ToInt32(DateTime.Today.Year);
-			if (year - inputYear >= 13)
-			{
-				return $"您的年齡是{year - inputYear}歲,已滿13歲";
-			}
-			else
-			{
-				return $"您的年齡是{year - inputYear}歲,未滿13歲";
-			}
-
-
+			int age = year - inputYear;
+			return age >= 13	?$"您的年齡是{age}歲,已滿13歲"
+								:$"您的年齡是{age}歲,未滿13歲";
+			
+			
+	
 		}
 
 		//確認輸入日期是否正確

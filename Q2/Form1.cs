@@ -45,11 +45,7 @@ namespace Q2
 		private DateTime GetDate(string input)
 		{
 			bool isDateTime=DateTime.TryParse(input, out DateTime dt);
-			if (isDateTime == false)
-			{
-				throw new Exception("請輸入正確的日期格式: 年/月/日");
-			}
-			return dt;
+			return (isDateTime == false) ? throw new Exception("請輸入正確的日期格式: 年/月/日") : dt;
 		}
 	}
 }
